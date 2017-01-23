@@ -1,0 +1,4 @@
+$ipaddr = arp -a | Select-String "50-c7"
+$ipstr = $ipaddr.ToString().SubString(2,13)
+
+TPLinkConsole $ipstr on
